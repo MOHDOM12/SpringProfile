@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of MyProfile</title>
+</head>
+<body>
+<!--/*@thymesVar id="myProfile" type="Mohd.springframework.SpringProfile.model.MyProfile"*/-->
+<h2 th:text="'List of MyProfile'">MyProfile</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th style="width: 150px;">Id</th>
+            <th style="width: 150px;">FullName/th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="myProfile : ${myProfiles}">
+            <td th:text="${myProfile.id}">1</td>
+            <td th:text="${myProfile.fullName}">Joe</td>
+        </tbody>
+    </table>
+</body>
+</html>
